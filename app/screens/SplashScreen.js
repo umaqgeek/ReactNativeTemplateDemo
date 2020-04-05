@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 
 export default class SplashScreen extends Component {
   componentDidMount() {
-    this.props.navigation.navigate('TabNavigatorScreen');
+    this.props.navigation.navigate('SplashScreen');
   }
 
   render() {

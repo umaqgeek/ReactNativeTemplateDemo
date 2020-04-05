@@ -36,13 +36,13 @@ const TabNavigator = createBottomTabNavigator(
     Bar1Tab: {
       screen: Service1Stack,
       navigationOptions: {
-        tabBarLabel: 'Page11',
+        tabBarLabel: 'Tab 1',
       },
     },
     Bar2Tab: {
       screen: Service2Stack,
       navigationOptions: {
-        tabBarLabel: 'Page21',
+        tabBarLabel: 'Tab 2',
       },
     },
   },
