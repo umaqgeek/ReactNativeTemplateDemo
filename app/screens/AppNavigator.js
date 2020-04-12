@@ -8,7 +8,8 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createSwitchNavigator} from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer';
 
-import NavigationDrawerStructure from './NavigationDrawerStructure';
+import NavigationDrawerStructure from '../components/NavigationDrawerStructure';
+import CustomSidebarMenu from '../components/CustomSidebarMenu';
 import SplashScreen from './SplashScreen';
 import LoginScreen from './LoginScreen';
 import Page1Screen from './Page1Screen';
@@ -99,6 +100,7 @@ const TabNavigator = createBottomTabNavigator(
   },
 );
 
+global.currentScreenIndex = 0;
 const DrawerNavigator = createDrawerNavigator(
   {
     //Drawer Optons and indexing
@@ -117,7 +119,7 @@ const DrawerNavigator = createDrawerNavigator(
   },
   {
     //For the Custom sidebar menu we have to provide our CustomSidebarMenu
-    // contentComponent: CustomSidebarMenu,
+    contentComponent: CustomSidebarMenu,
     //Sidebar width
     drawerWidth: Dimensions.get('window').width - 130,
   }
