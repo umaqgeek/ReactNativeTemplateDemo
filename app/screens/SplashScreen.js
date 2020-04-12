@@ -3,7 +3,9 @@ import {View, Text, StyleSheet} from 'react-native';
 
 export default class SplashScreen extends Component {
   componentDidMount() {
-    this.props.navigation.navigate('SplashScreen');
+    setTimeout(() => {
+      this.props.navigation.navigate('DrawerNavigator');
+    }, 1500);
   }
 
   render() {
